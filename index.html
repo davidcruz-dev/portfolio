@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>David De La Cruz | Generative AI Engineer</title>
+    <title>David De La Cruz | Product Engineer</title>
     <style>
         * {
             margin: 0;
@@ -11,578 +11,338 @@
             box-sizing: border-box;
         }
 
-        :root {
-            --bg-dark: #0a0a0a;
-            --bg-card: #1a1a1a;
-            --accent: #00ff88;
-            --accent-hover: #00cc6a;
-            --text-primary: #ffffff;
-            --text-secondary: #a0a0a0;
-            --border: #2a2a2a;
-        }
-
         body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
-            background-color: var(--bg-dark);
-            color: var(--text-primary);
-            line-height: 1.6;
-            overflow-x: hidden;
-        }
-
-        /* Header/Navigation */
-        header {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: rgba(10, 10, 10, 0.95);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border);
-            z-index: 1000;
-            padding: 1rem 2rem;
-        }
-
-        nav {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--accent);
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-        }
-
-        .nav-links a {
-            color: var(--text-secondary);
-            text-decoration: none;
-            transition: color 0.3s;
-        }
-
-        .nav-links a:hover {
-            color: var(--accent);
-        }
-
-        /* Hero Section */
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            padding: 6rem 2rem 2rem;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-        }
-
-        .hero-content {
-            max-width: 1200px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 4rem;
-            align-items: center;
-        }
-
-        .hero-text h1 {
-            font-size: 3.5rem;
-            margin-bottom: 1rem;
-            background: linear-gradient(135deg, var(--accent) 0%, #00ccff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        .hero-text .subtitle {
-            font-size: 1.5rem;
-            color: var(--text-secondary);
-            margin-bottom: 1.5rem;
-        }
-
-        .hero-text .description {
-            font-size: 1.1rem;
-            color: var(--text-secondary);
-            margin-bottom: 2rem;
-            line-height: 1.8;
-        }
-
-        .cta-buttons {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .btn {
-            padding: 1rem 2rem;
-            border: none;
-            border-radius: 8px;
-            font-size: 1rem;
-            cursor: pointer;
-            transition: all 0.3s;
-            text-decoration: none;
-            display: inline-block;
-        }
-
-        .btn-primary {
-            background: var(--accent);
-            color: var(--bg-dark);
-            font-weight: bold;
-        }
-
-        .btn-primary:hover {
-            background: var(--accent-hover);
-            transform: translateY(-2px);
-        }
-
-        .btn-secondary {
-            background: transparent;
-            color: var(--accent);
-            border: 2px solid var(--accent);
-        }
-
-        .btn-secondary:hover {
-            background: var(--accent);
-            color: var(--bg-dark);
-        }
-
-        .hero-image {
-            display: flex;
-            justify-content: center;
-        }
-
-        .hero-image img {
-            width: 400px;
-            height: 400px;
-            border-radius: 20px;
-            object-fit: cover;
-            border: 3px solid var(--accent);
-            box-shadow: 0 20px 60px rgba(0, 255, 136, 0.3);
-        }
-
-        /* Section Styles */
-        section {
-            padding: 6rem 2rem;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-
-        .section-title {
-            font-size: 2.5rem;
-            margin-bottom: 3rem;
-            text-align: center;
-            background: linear-gradient(135deg, var(--accent) 0%, #00ccff 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-
-        /* Projects Grid */
-        .projects-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-        }
-
-        .project-card {
-            background: var(--bg-card);
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid var(--border);
-            transition: transform 0.3s, box-shadow 0.3s;
-        }
-
-        .project-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 10px 30px rgba(0, 255, 136, 0.2);
-        }
-
-        .project-image {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            border-bottom: 1px solid var(--border);
-        }
-
-        .project-content {
+            font-family: 'Courier New', Courier, monospace;
+            background-color: #000000;
+            color: #ffffff;
+            line-height: 1.7;
             padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
         }
 
-        .project-content h3 {
+        a {
+            color: #ffffff;
+            text-decoration: underline;
+        }
+
+        a:hover {
+            opacity: 0.7;
+        }
+
+        section {
+            margin-bottom: 3rem;
+        }
+
+        h1 {
             font-size: 1.5rem;
+            font-weight: normal;
             margin-bottom: 0.5rem;
-            color: var(--accent);
         }
 
-        .project-content .tech-stack {
-            color: var(--text-secondary);
-            font-size: 0.9rem;
+        h2 {
+            font-size: 1rem;
+            font-weight: normal;
+            margin-bottom: 1.5rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            border-bottom: 1px solid #333;
+            padding-bottom: 0.5rem;
+        }
+
+        .intro {
+            margin-bottom: 3rem;
+        }
+
+        .intro p {
             margin-bottom: 1rem;
+            color: #cccccc;
         }
 
-        .project-content p {
-            color: var(--text-secondary);
+        .subtitle {
+            color: #888888;
             margin-bottom: 1.5rem;
         }
 
-        .project-links {
-            display: flex;
-            gap: 1rem;
+        .project {
+            margin-bottom: 2rem;
         }
 
-        .project-link {
-            padding: 0.5rem 1rem;
-            background: transparent;
-            border: 1px solid var(--accent);
-            color: var(--accent);
-            text-decoration: none;
-            border-radius: 6px;
+        .project-title {
+            font-weight: bold;
+        }
+
+        .project-meta {
+            color: #888888;
             font-size: 0.9rem;
-            transition: all 0.3s;
+            margin-bottom: 0.5rem;
         }
 
-        .project-link:hover {
-            background: var(--accent);
-            color: var(--bg-dark);
+        .project-description {
+            color: #cccccc;
+            margin-bottom: 0.5rem;
         }
 
-        /* Skills Section */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
+        .metrics {
+            color: #888888;
+            font-size: 0.9rem;
+        }
+
+        .experience {
+            margin-bottom: 2rem;
+        }
+
+        .experience-title {
+            font-weight: bold;
+        }
+
+        .experience-meta {
+            color: #888888;
+            font-size: 0.9rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .experience-description {
+            color: #cccccc;
+        }
+
+        .experience-description ul {
+            margin-left: 1.5rem;
+            margin-top: 0.5rem;
+        }
+
+        .experience-description li {
+            margin-bottom: 0.3rem;
+        }
+
+        .skills-list {
+            color: #cccccc;
         }
 
         .skill-category {
-            background: var(--bg-card);
-            padding: 2rem;
-            border-radius: 12px;
-            border: 1px solid var(--border);
-        }
-
-        .skill-category h3 {
-            color: var(--accent);
             margin-bottom: 1rem;
-            font-size: 1.2rem;
         }
 
-        .skill-tags {
+        .skill-label {
+            color: #888888;
+        }
+
+        .connect-links {
             display: flex;
             flex-wrap: wrap;
-            gap: 0.5rem;
+            gap: 1.5rem;
         }
 
-        .skill-tag {
-            padding: 0.5rem 1rem;
-            background: var(--bg-dark);
-            border: 1px solid var(--border);
-            border-radius: 20px;
-            font-size: 0.9rem;
-            color: var(--text-secondary);
+        .connect-category {
+            margin-bottom: 1rem;
         }
 
-        /* Contact Section */
-        .contact-content {
-            text-align: center;
+        .connect-category-label {
+            color: #888888;
+            margin-bottom: 0.5rem;
         }
 
-        .contact-links {
-            display: flex;
-            justify-content: center;
-            gap: 2rem;
-            margin-top: 2rem;
+        .quote {
+            border-left: 2px solid #333;
+            padding-left: 1rem;
+            color: #888888;
+            font-style: italic;
+            margin-top: 3rem;
         }
 
-        .contact-link {
-            display: flex;
-            align-items: center;
-            gap: 0.5rem;
-            padding: 1rem 2rem;
-            background: var(--bg-card);
-            border: 1px solid var(--border);
-            border-radius: 8px;
-            color: var(--text-primary);
-            text-decoration: none;
-            transition: all 0.3s;
-        }
-
-        .contact-link:hover {
-            border-color: var(--accent);
-            transform: translateY(-2px);
-        }
-
-        /* Footer */
         footer {
-            text-align: center;
-            padding: 2rem;
-            border-top: 1px solid var(--border);
-            color: var(--text-secondary);
+            margin-top: 4rem;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            color: #666666;
+            font-size: 0.9rem;
         }
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                text-align: center;
+        @media (max-width: 600px) {
+            body {
+                padding: 1rem;
             }
 
-            .hero-text h1 {
-                font-size: 2.5rem;
-            }
-
-            .hero-image img {
-                width: 300px;
-                height: 300px;
-            }
-
-            .nav-links {
-                gap: 1rem;
-                font-size: 0.9rem;
-            }
-
-            .projects-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .cta-buttons {
+            .connect-links {
                 flex-direction: column;
-            }
-
-            .contact-links {
-                flex-direction: column;
+                gap: 0.5rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header -->
-    <header>
-        <nav>
-            <div class="logo">David De La Cruz</div>
-            <ul class="nav-links">
-                <li><a href="#top">About</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#skills">Skills</a></li>
-                <li><a href="#contact">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
+    <!-- Intro -->
+    <section class="intro">
+        <h1>David De La Cruz</h1>
+        <div class="subtitle">Product Engineer | AI-Powered Product Development</div>
+        <p>
+            I build and ship products end-to-end using AI-assisted development. Launched 3 production applications
+            in 9 months by combining product thinking with Claude Code and modern AI tools — delivering outcomes
+            60% faster than traditional development.
+        </p>
+        <p>
+            Strong product intuition with technical execution ability: I understand what to build, validate with users,
+            and ship rapidly. Based in Edinburgh, Scotland.
+        </p>
+    </section>
 
-    <!-- Hero Section -->
-    <section id="top" class="hero">
-        <div class="hero-content">
-            <div class="hero-text">
-                <h1>Generative AI Engineer</h1>
-                <div class="subtitle">Building AI-Powered Applications</div>
-                <p class="description">
-                    Full-stack developer specializing in generative AI, SaaS platforms, and mobile solutions. 
-                    I build production-ready applications that leverage cutting-edge AI technology to solve real-world problems.
-                </p>
-                <div class="cta-buttons">
-                    <a href="#projects" class="btn btn-primary">View Projects</a>
-                    <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-                </div>
+    <!-- Current Projects -->
+    <section>
+        <h2>Current Projects</h2>
+
+        <div class="project">
+            <div class="project-title">
+                <a href="https://apps.shopify.com/chargeback-shield" target="_blank">Chargeback Shield</a>
             </div>
-            <div class="hero-image">
-                <img src="profile.jpg" alt="David De La Cruz">
+            <div class="project-meta">Shopify App • Fraud Detection • ML Risk Scoring</div>
+            <div class="project-description">
+                AI-powered fraud detection for Shopify merchants. Real-time ML-based risk scoring
+                to prevent chargebacks before they happen.
+            </div>
+            <div class="metrics">£1,000+ in prevented chargebacks for early merchants</div>
+        </div>
+
+        <div class="project">
+            <div class="project-title">
+                <a href="https://www.riderads.co.uk/" target="_blank">RiderAds.co.uk</a>
+            </div>
+            <div class="project-meta">Co-founder • AdTech Platform • React Native</div>
+            <div class="project-description">
+                Two-sided marketplace connecting delivery riders with local brands. Built mobile platform
+                with GPS tracking, automated ad verification using Azure Computer Vision, and real-time analytics.
+            </div>
+            <div class="metrics">30K+ daily impressions • 20+ brand partnerships • 95%+ rider satisfaction</div>
+        </div>
+
+        <div class="project">
+            <div class="project-title">Bitcoin Trading Bot</div>
+            <div class="project-meta">Azure OpenAI • GPT-4 Vision • Automated Analysis</div>
+            <div class="project-description">
+                Automated chart analysis tool using Azure OpenAI GPT-4 and Computer Vision for pattern recognition.
+                Deployed on Azure cloud infrastructure.
+            </div>
+        </div>
+
+        <div class="project">
+            <div class="project-title">
+                <a href="https://frogbitshop.up.railway.app/" target="_blank">FrogbitShop</a>
+            </div>
+            <div class="project-meta">E-commerce Platform • Drag-and-Drop Builder</div>
+            <div class="project-description">
+                E-commerce platform with drag-and-drop customization, enabling merchants to launch
+                custom storefronts without code.
             </div>
         </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects">
-        <h2 class="section-title">Featured Projects</h2>
-        <div class="projects-grid">
-            <!-- Chargeback Shield -->
-            <div class="project-card">
-                <img src="chargeback-shield.png" alt="Chargeback Shield" class="project-image">
-                <div class="project-content">
-                    <h3>Chargeback Shield</h3>
-                    <p class="tech-stack">TypeScript • React • Node.js • TensorFlow.js • Shopify API</p>
-                    <p>
-                        Intelligent fraud detection system for Shopify merchants using machine learning algorithms. 
-                        Automatically analyzes orders for fraud risk and prevents expensive chargebacks.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://apps.shopify.com/chargeback-shield" target="_blank" class="project-link">View Live →</a>
-                    </div>
-                </div>
-            </div>
+    <!-- Experience -->
+    <section>
+        <h2>Experience</h2>
 
-            <!-- RiderAds -->
-            <div class="project-card">
-                <img src="riderads.jpg" alt="Rider Ads" class="project-image">
-                <div class="project-content">
-                    <h3>Rider Ads</h3>
-                    <p class="tech-stack">React Native • Firebase • WebSockets • GPS APIs</p>
-                    <p>
-                        AdTech platform connecting delivery riders with brands. Built complete mobile app with real-time 
-                        tracking, QR verification, and analytics. Serving 10+ riders generating 30K+ daily impressions.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://www.riderads.co.uk/" target="_blank" class="project-link">View Live →</a>
-                    </div>
-                </div>
+        <div class="experience">
+            <div class="experience-title">Product Engineer at Frogbit Solutions</div>
+            <div class="experience-meta">June 2024 – Present • Edinburgh, UK</div>
+            <div class="experience-description">
+                Building AI-powered products for clients using Claude Code and AI-assisted development.
+                Own full cycle from requirements to production launch.
+                <ul>
+                    <li>Shipped 3 production applications in 9 months — 60% faster than traditional timelines</li>
+                    <li>Led discovery and requirements gathering, translating business needs into product specs</li>
+                    <li>Validated solutions through iterative demos and client feedback loops</li>
+                </ul>
             </div>
+        </div>
 
-            <!-- E-commerce Platform -->
-            <div class="project-card">
-                <img src="spaniard.jpg" alt="Spaniard E-commerce" class="project-image">
-                <div class="project-content">
-                    <h3>Multi-tenant E-commerce</h3>
-                    <p class="tech-stack">Laravel • PostgreSQL • Stripe • Multi-tenancy</p>
-                    <p>
-                        Full-featured e-commerce CMS with multi-tenant architecture, subscription billing, 
-                        and Stripe Connect integration. Built for scalability and tenant isolation.
-                    </p>
-                    <div class="project-links">
-                        <a href="https://spaniardheritage.com/" target="_blank" class="project-link">View Live →</a>
-                        <a href="https://frogbitshop.up.railway.app/" target="_blank" class="project-link">View Platform →</a>
-                    </div>
-                </div>
+        <div class="experience">
+            <div class="experience-title">Product Builder & Co-founder at RiderAds.co.uk</div>
+            <div class="experience-meta">May 2024 – Present • Edinburgh, UK</div>
+            <div class="experience-description">
+                Built mobile advertising platform from 0 to 30K+ daily impressions.
+                <ul>
+                    <li>Defined product vision for two-sided marketplace</li>
+                    <li>Conducted user research with 30+ riders and brands to validate product-market fit</li>
+                    <li>Built platform with React Native, Firebase, Node.js + Azure Computer Vision</li>
+                    <li>Managed team of 10 contractors across development and operations</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="experience">
+            <div class="experience-title">Co-founder at Algae</div>
+            <div class="experience-meta">November 2019 – November 2021 • Edinburgh, UK</div>
+            <div class="experience-description">
+                Founded sustainable bioplastics venture at age 20.
+                <ul>
+                    <li>Secured £5,000 innovation voucher from Scottish Enterprise</li>
+                    <li>Led R&D partnership with Edinburgh Napier University nanotech lab</li>
+                    <li>Validated market opportunity (later commercialized by partner as mercel.co.uk)</li>
+                </ul>
             </div>
         </div>
     </section>
 
-    <!-- Skills Section -->
-    <section id="skills">
-        <h2 class="section-title">Technical Skills</h2>
-        <div class="skills-grid">
+    <!-- Skills -->
+    <section>
+        <h2>Skills</h2>
+        <div class="skills-list">
             <div class="skill-category">
-                <h3>AI & Development</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Claude API</span>
-                    <span class="skill-tag">OpenAI</span>
-                    <span class="skill-tag">Azure OpenAI Service</span>
-                    <span class="skill-tag">Azure AI Foundry</span>
-                    <span class="skill-tag">Azure Computer Vision</span>
-                    <span class="skill-tag">LLM Integration</span>
-                    <span class="skill-tag">Prompt Engineering</span>
-                    <span class="skill-tag">TensorFlow.js</span>
-                    <span class="skill-tag">Machine Learning</span>
-                    <span class="skill-tag">Pattern Recognition</span>
-                </div>
+                <span class="skill-label">AI-Powered Building:</span> Claude Code (expert) • Azure OpenAI • GPT-4 • Computer Vision APIs • AI-assisted development
             </div>
-
             <div class="skill-category">
-                <h3>Languages</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">JavaScript/TypeScript</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">PHP</span>
-                    <span class="skill-tag">HTML5/CSS3</span>
-                </div>
+                <span class="skill-label">Technical:</span> React Native • Node.js • Firebase • Azure Cloud • Docker • TypeScript • Python
             </div>
-
             <div class="skill-category">
-                <h3>Frontend</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Next.js</span>
-                    <span class="skill-tag">React Native</span>
-                    <span class="skill-tag">React Router</span>
-                    <span class="skill-tag">SPA Development</span>
-                </div>
+                <span class="skill-label">Product:</span> User research • Product validation • Feature prioritization • Go-to-market • Rapid prototyping
             </div>
-
             <div class="skill-category">
-                <h3>Backend</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">Laravel 10+</span>
-                    <span class="skill-tag">Flask</span>
-                    <span class="skill-tag">Express</span>
-                    <span class="skill-tag">API Development</span>
-                    <span class="skill-tag">Webhooks</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3>Databases</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">PostgreSQL</span>
-                    <span class="skill-tag">Prisma ORM</span>
-                    <span class="skill-tag">Firebase</span>
-                    <span class="skill-tag">Multi-tenant Architecture</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3>Cloud & DevOps</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Azure OpenAI</span>
-                    <span class="skill-tag">Azure Computer Vision</span>
-                    <span class="skill-tag">Azure Cognitive Services</span>
-                    <span class="skill-tag">Railway</span>
-                    <span class="skill-tag">Docker</span>
-                    <span class="skill-tag">Firebase</span>
-                    <span class="skill-tag">GitHub Actions CI/CD</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3>E-commerce & Integrations</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Shopify App Development</span>
-                    <span class="skill-tag">Shopify GraphQL API</span>
-                    <span class="skill-tag">Stripe Payments</span>
-                    <span class="skill-tag">Subscription Billing</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3>Specialized</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">Anti-fraud Systems</span>
-                    <span class="skill-tag">Real-time Systems</span>
-                    <span class="skill-tag">WebSockets</span>
-                    <span class="skill-tag">Trading/Finance Tools</span>
-                    <span class="skill-tag">Mobile Development</span>
-                    <span class="skill-tag">Computer Vision</span>
-                    <span class="skill-tag">Multi-threaded Apps</span>
-                </div>
-            </div>
-
-            <div class="skill-category">
-                <h3>Human Languages</h3>
-                <div class="skill-tags">
-                    <span class="skill-tag">English (Native)</span>
-                    <span class="skill-tag">Spanish (Native)</span>
-                    <span class="skill-tag">Italian (Working)</span>
-                </div>
+                <span class="skill-label">Business:</span> Entrepreneurship • Stakeholder management • Metrics & analytics • Customer discovery
             </div>
         </div>
     </section>
 
-    <!-- Contact Section -->
-    <section id="contact">
-        <h2 class="section-title">Get In Touch</h2>
-        <div class="contact-content">
-            <p style="color: var(--text-secondary); font-size: 1.2rem; margin-bottom: 2rem;">
-                Interested in working together? Let's connect!
-            </p>
-            <div class="contact-links">
-                <a href="mailto:davidcruz.eu@gmail.com" class="contact-link">
-                    📧 Email
-                </a>
-                <a href="https://linkedin.com/in/davidlacruz" target="_blank" class="contact-link">
-                    💼 LinkedIn
-                </a>
-                <a href="https://github.com/davidcruz-dev" target="_blank" class="contact-link">
-                    🔗 GitHub
-                </a>
+    <!-- Education -->
+    <section>
+        <h2>Education</h2>
+        <div class="experience">
+            <div class="experience-title">BSc (Hons) Open Degree</div>
+            <div class="experience-meta">The Open University • 2017 – 2025</div>
+            <div class="experience-description">
+                Focus: Generative AI, Business Management, Marketing
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
+    <!-- Languages -->
+    <section>
+        <h2>Languages</h2>
+        <div class="skills-list">
+            English (Bilingual) • Spanish (Bilingual) • Italian (Working proficiency)
+        </div>
+    </section>
+
+    <!-- Connect -->
+    <section>
+        <h2>Connect</h2>
+        <div class="connect-links">
+            <a href="mailto:davidcruz.eu@gmail.com">Email</a>
+            <a href="tel:+447778934806">+44 7778 934 806</a>
+            <a href="https://linkedin.com/in/davidlacruz" target="_blank">LinkedIn</a>
+            <a href="https://github.com/davidcruz-dev" target="_blank">GitHub</a>
+        </div>
+    </section>
+
+    <!-- Quote -->
+    <div class="quote">
+        "I don't fit the traditional 'product engineer' mold — I'm a builder who ships products fast using modern AI tools.
+        If you need someone who ships outcomes, not just code, I'm your person."
+    </div>
+
     <footer>
-        <p>Built with passion &copy; <span id="current-year"></span> David De La Cruz.</p>
+        &copy; <span id="year"></span> David De La Cruz
     </footer>
-    
+
     <script>
-        document.getElementById('current-year').textContent = new Date().getFullYear();
+        document.getElementById('year').textContent = new Date().getFullYear();
     </script>
 </body>
 </html>
